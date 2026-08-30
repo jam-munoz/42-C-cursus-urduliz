@@ -6,11 +6,11 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 00:39:28 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/25 00:39:32 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:42:27 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int *ft_memcmp(const void s1[], const void s2[], size_t n)
+int	*ft_memcmp(const void s1[], const void s2[], size_t n)
 {
 	const unsigned char	*p1;
 	const unsigned char	*p2;

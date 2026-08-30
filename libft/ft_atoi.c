@@ -6,33 +6,33 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:11:10 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/10 18:54:57 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:45:37 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	sign;
 	int	sum;
 
-	if (!str)
+	if (!nptr)
 		return (0);
 	i = 0;
 	sign = 1;
 	sum = 0;
-	while (str[i] == ' ' || (9 <= str[i] && str[i] <= 13))
+	while (nptr[i] == ' ' || (9 <= nptr[i] && nptr[i] <= 13))
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign = -1;
 		i++;
 	}
-	while ('0' <= str[i] && str[i] <= '9')
+	while ('0' <= nptr[i] && nptr[i] <= '9')
 	{
 		sum *= 10;
-		sum += str[i] - '0';
+		sum += nptr[i] - '0';
 		i++;
 	}
 	return (sum * sign);

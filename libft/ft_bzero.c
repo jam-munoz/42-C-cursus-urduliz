@@ -6,11 +6,11 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:20:50 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/24 15:41:17 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:41:53 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_bzero(void s[], size_t n)
+void	*ft_bzero(void s[], size_t n)
 {
 	unsigned char *p
 

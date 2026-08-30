@@ -6,11 +6,11 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:50:11 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/24 15:50:14 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/29 23:42:54 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memmove(void dest[], const void src[], size_t n)
+void	*ft_memmove(void dest[], const void src[], size_t n)
 {
 	unsigned char	   *d;
 	const unsigned char *s;
