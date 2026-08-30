@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 14:54:34 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 11:56:43 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 20:55:01 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	p1 = (const unsigned char *)s1;
 	p2 = (const unsigned char *)s2;
-
 	while (n > 0)
 	{
 		if (*p1 != *p2 || *p1 == '\0')

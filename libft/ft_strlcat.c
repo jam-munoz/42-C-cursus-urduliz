@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 15:13:26 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 19:37:30 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 20:54:45 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	src_len;
 	size_t	dest_len;
 
-	src_len	= ft_strlen(src);
+	src_len = ft_strlen(src);
 	dest_len = 0;
 	while (dest_len < size && dst[dest_len] != '\0')
 	{

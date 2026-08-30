@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 11:58:54 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 19:47:33 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 20:54:53 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	*dst = '\0';
 	return (len);
 }
-
