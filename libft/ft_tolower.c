@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 02:20:01 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 02:20:04 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:30:24 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return (c + 32);

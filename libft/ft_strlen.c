@@ -6,13 +6,15 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/09 12:11:27 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:53:02 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 02:50:09 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 size_t	ft_strlen(const char *s)
 {
-	char	*p;
+	const char	*p;
 
 	p = s;
 	while (*p != '\0')

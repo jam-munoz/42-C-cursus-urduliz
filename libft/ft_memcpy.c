@@ -6,18 +6,25 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:35:08 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/24 15:41:34 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 17:10:44 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memcpy(void dest[], const void src[], size_t n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	d = dest;
 	s = src;
-	while (n--)
-		*d++ = *s++;
+	while (n > 0)
+	{
+		*d = *s;
+		d++;
+		s++;
+		n--;
+	}
 	return (dest);
 }

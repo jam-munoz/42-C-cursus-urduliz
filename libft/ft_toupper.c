@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 02:20:43 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 02:20:47 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:30:27 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if ('a' <= c && c <= 'z')
 		return (c - 32);

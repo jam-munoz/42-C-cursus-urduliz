@@ -6,20 +6,22 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 21:09:18 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:55:10 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:39:40 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	const char *start;
+	const char	*start;
 
 	start = s;
 	while (*s != '\0')
 		s++;
-	while (s > start)
+	while (s >= start)
 	{
-		if (*s == (unsigned char)*c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s--;
 	}

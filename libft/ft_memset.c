@@ -6,16 +6,22 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:30:39 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:43:23 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 17:20:50 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void s[], int c, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *p
+	unsigned char	*p;
 
 	p = s;
-	while (n--)
-		*p++ = (unsigned char)c;
+	while (n > 0)
+	{
+		*p = (unsigned char)c;
+		p++;
+		n--;
+	}
 	return (s);
 }

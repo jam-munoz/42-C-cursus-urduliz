@@ -6,14 +6,16 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 23:28:03 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:35:16 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:34:46 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *out;
-	t_list *p;
+	t_list	*out;
+	t_list	*p;
 
 	out = NULL;
 	if (lst == NULL || f == NULL)

@@ -6,13 +6,15 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/09 12:13:06 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 22:04:14 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 02:46:40 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putstr_fd(char *s, int fd)
+#include "libft.h"
+
+void	ft_putstr_fd(const char *s, int fd)
 {
-	char	*p;
+	const char	*p;
 
 	p = s;
 	while (*p != '\0')

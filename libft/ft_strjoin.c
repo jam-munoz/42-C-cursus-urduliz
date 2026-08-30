@@ -6,15 +6,17 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 01:57:54 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 02:03:26 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:31:45 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strjoin(const char *s1, const char *s2)
+#include "libft.h"
+
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	int		len;
-	char	*str;
-	char	*p;
+	int			len;
+	char		*str;
+	const char	*p;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);

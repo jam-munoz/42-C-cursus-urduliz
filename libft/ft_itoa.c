@@ -6,17 +6,14 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 09:35:48 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:07:14 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 15:13:24 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_digit_count(int nb)
-{
-	unsigned int	n;
+#include "libft.h"
 
-	n = nb;
-	if (nb < 0)
-		n = -n;
+static int	ft_digit_count(unsigned int n)
+{
 	if (n < 10)
 		return (1);
 	if (n < 100)
@@ -40,23 +37,24 @@ static int	ft_digit_count(int nb)
 
 char	*ft_itoa(int nb)
 {
-	long	n;
-	int		digits;
-	char	*str;
-	int		i;
-	int		start;
+	unsigned int	n;
+	int				digits;
+	int				start;
+	char			*str;
 
 	n = nb;
-	digits = ft_digit_count(nb);
-	str = malloc(digits + 1);
-	i = 0;
 	start = 0;
-	if (n < 0)
+	if (nb < 0)
 	{
-		n *= -1;
-		str[i++] = '-';
+		n = -n;
 		start = 1;
 	}
+	digits = ft_digit_count(n) + start;
+	str = malloc(digits + 1);
+	if (str == NULL)
+		return (NULL);
+	if (nb < 0)
+		str[0] = '-';
 	str[digits--] = '\0';
 	while (digits >= start)
 	{

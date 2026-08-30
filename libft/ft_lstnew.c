@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/22 16:27:10 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 22:39:44 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:43:38 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list *ft_lstnew(void *content)
+#include "libft.h"
+
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 

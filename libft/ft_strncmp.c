@@ -6,20 +6,27 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/08 14:54:34 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:54:20 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:56:43 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char s1[], const char s2[], size_t n)
-{
-	size_t	i;
+#include "libft.h"
 
-	i = 0;
-	while (i < n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	const unsigned char	*p1;
+	const unsigned char	*p2;
+
+	p1 = (const unsigned char *)s1;
+	p2 = (const unsigned char *)s2;
+
+	while (n > 0)
 	{
-		if (s1[i] != s2[i] || s1[i] == '\0')
-			return (s1[i] - s2[i]);
-		i++;
+		if (*p1 != *p2 || *p1 == '\0')
+			return (*p1 - *p2);
+		p1++;
+		p2++;
+		n--;
 	}
 	return (0);
 }

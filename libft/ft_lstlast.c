@@ -6,13 +6,17 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/25 16:28:20 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:03:40 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 16:19:43 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list *ft_lstlast(t_list *lst)
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst->next)
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
 		lst = lst->next;
 	}

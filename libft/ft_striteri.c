@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 21:46:18 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 21:50:42 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:32:33 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *));
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 

@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 23:25:08 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:27:16 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:34:38 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
 	{

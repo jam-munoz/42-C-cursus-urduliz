@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 14:47:35 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/25 15:01:13 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 02:58:37 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_calloc(size_t n, size_t size)
+#include "libft.h"
+
+void	*ft_calloc(size_t n, size_t size)
 {
 	void			*out;
 	unsigned char	*p;

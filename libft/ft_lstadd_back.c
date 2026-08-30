@@ -6,15 +6,16 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/29 22:58:20 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:01:53 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 16:21:11 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list *p;
+#include "libft.h"
 
-	new->next = NULL;
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*p;
+
 	if (*lst == NULL)
 	{
 		*lst = new;

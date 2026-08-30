@@ -6,11 +6,13 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/25 16:28:20 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:03:33 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 11:33:26 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_lstsize(t_list *lst)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 

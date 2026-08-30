@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static int	check_set(const char c, const char *str)
 {
 	while (*str)

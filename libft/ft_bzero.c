@@ -6,13 +6,15 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:20:50 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 23:41:53 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/08/30 02:42:38 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void s[], size_t n)
+#include "libft.h"
+
+void	*ft_bzero(void *s, size_t n)
 {
-	unsigned char *p
+	unsigned char	*p;
 
 	p = s;
 	while (n--)
