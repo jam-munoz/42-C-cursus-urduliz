@@ -1,6 +1,6 @@
 # ft_printf
 
-*This project has been created as part of the 42 curriculum by <your_login>.*
+*This project has been created as part of the 42 curriculum by **joamunoz**.*
 
 ## Description
 
@@ -60,14 +60,6 @@ Output is accumulated in a fixed-size buffer instead of writing every character 
 When there is not enough space for the next complete value, the buffer is flushed with `write()` and reused. Strings are handled incrementally because their length can exceed the buffer size.
 
 This reduces the number of system calls while keeping the implementation simple and avoiding dynamic allocation.
-
-### Complexity
-
-For numeric conversions, the time complexity is `O(d)`, where `d` is the number of digits.
-
-String conversions are `O(n)`, where `n` is the string length.
-
-The buffer uses `O(1)` additional memory because its size is fixed.
 
 ## Resources
 
