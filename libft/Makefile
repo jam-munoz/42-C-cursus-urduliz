@@ -6,7 +6,7 @@
 #    By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/15 17:54:04 by joamunoz          #+#    #+#              #
-#    Updated: 2026/08/30 16:43:19 by joamunoz         ###   ########.fr        #
+#    Updated: 2026/09/18 17:12:27 by joamunoz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ SOURCE_FILES = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isa
 		ft_lstlast.c ft_lstmap.c ft_lstnew.c  ft_lstsize.c
 
 OBJECTS = ${SOURCE_FILES:.c=.o}
-.c.o:
+
+%.o: %.c libft.h
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJECTS}

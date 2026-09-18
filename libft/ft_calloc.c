@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 14:47:35 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 02:58:37 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/18 16:11:18 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ void	*ft_calloc(size_t n, size_t size)
 	if (out == NULL)
 		return (NULL);
 	p = out;
-	while (len--)
+	while (len > 0)
 	{
-		*p++ = 0;
+		*p = 0;
+		p++;
+		len--;
 	}
 	return (out);
 }

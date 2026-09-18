@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 15:20:50 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 02:42:38 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/18 16:09:41 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ void	*ft_bzero(void *s, size_t n)
 	unsigned char	*p;
 
 	p = s;
-	while (n--)
-		*p++ = 0;
+	while (n > 0)
+	{
+		*p = 0;
+		p++;
+		n--;
+	}
 	return (s);
 }

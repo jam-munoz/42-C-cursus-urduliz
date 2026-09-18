@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/09 12:13:06 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/29 22:04:16 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/03 17:01:02 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,17 @@ void	ft_putendl_fd(char *s, int fd)
 	int		i;
 
 	i = 0;
-	while (s[i] != '\0' && i < 1022)
+	while (*s != '\0')
 	{
-		buf[i] = s[i];
+		buf[i] = *s;
+		s++;
 		i++;
+		if (i == 1024)
+		{
+			write(fd, buf, i);
+			i = 0;
+		}
 	}
-	buf[i] = '\n';
-	write(fd, buf, i + 1);
+	buf[i++] = '\n';
+	write(fd, buf, i);
 }

@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/30 11:30:49 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/08/30 11:43:47 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/18 17:12:40 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
 
 int		ft_atoi(const char *nptr);
 void	*ft_bzero(void *s, size_t n);
