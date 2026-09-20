@@ -70,7 +70,8 @@ This reduces the number of system calls while keeping the implementation simple 
   - Chapter 18.2 - The `static` Storage Class
   - Chapter 20.1 - Bitwise Operators
 - *Advanced Programming in the UNIX Environment*, W. Richard Stevens
-  - Chapter 3.8 - write Function
+  - Chapter 3.2 - File Descriptors
+  - Chapter 3.8 - `write` Function
   - Chapter 3.9 - I/O Efficiency
 - *The GNU C Reference Manual*
 - `printf(3)` and related C library man pages.

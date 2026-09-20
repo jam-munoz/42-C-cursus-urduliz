@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:48:20 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/09/02 12:53:27 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/09 19:36:21 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_print_buf(t_printf *pf)
 {
-	write(1, pf->buf, pf->buf_len);
+	write(STDOUT_FILENO, pf->buf, pf->buf_len);
 	pf->buf_len = 0;
 }
 
