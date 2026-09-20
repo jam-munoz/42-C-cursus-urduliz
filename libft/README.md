@@ -68,11 +68,13 @@ String and memory handling:
 - `ft_memchr`
 - `ft_memcmp`
 - `ft_strnstr`
+- `ft_strdup`
 
-Conversion:
+General Utilities:
 - `ft_atoi`
+- `ft_calloc`
 
-The project requires these functions to be implemented without relying on external functions.
+The project requires these functions to be implemented without relying on external functions, with the exception of malloc for ft_calloc and ft_strdup.
 
 ### Part 2 - Additional Functions
 
