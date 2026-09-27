@@ -3,78 +3,114 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joamunoz <joamunoz@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 09:16:03 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/09/26 19:03:43 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/27 16:47:47 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char *read_until_nl(int fd)
-{
-	char	buf[BUFFER_SIZE + 1];
-	int		bytes_read;
-	char	*line;
-	char	*next;
-	static char	*stash;
 
-	bytes_read = read(fd, buf, BUFFER_SIZE);
-	buf[bytes_read] = '\0';
-	if (stash == NULL)
-		line = ft_strdup(buf);
-	else
-	{
-		line = ft_strjoin(stash, buf);
-		free(stash);
-	}
-	while (bytes_read > 0 && ft_strchr(next, '\n') == NULL)
+static char	*get_stash(int fd, char *stash)
+{
+	char	*buf;
+	char	*p;
+	int		bytes_read;
+
+	bytes_read = 1;
+	buf = malloc(BUFFER_SIZE + 1);
+	if (buf == NULL)
+		return (NULL);
+	while (bytes_read > 0)
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 		if (bytes_read < 0)
+		{
+			free(buf);
 			return (NULL);
+		}
 		buf[bytes_read] = '\0';
-		next = ft_strjoin(line, buf);
-		free(line);
-		line = next;
+		p = stash;
+		stash = ft_strjoin(stash, buf);
+		free(p);
+		if (ft_strchr(buf, '\n') != NULL)
+			break;
 	}
-
-	//separar la linea hasta el /n
-	line = ft_substr(line, 0);
-	
-	if (bytes_read > ft_strlen(line))
-	{
-		next = ft_strchr(next, '\n') + 1;
-		stash = ft_strdup(next);
-	}
-	
-	return line;
+	free(buf);
+	return (stash);
 }
 
-/*char	*get_next_line(int fd)
+static char	*ft_get_line(char *stash, char **p)
 {
-	static char	*buf;
-	char		*line;
+	char	*line;
+	size_t	len;
 
-	// error handling
+	*p = ft_strchr(stash, '\n');
+	if (*p != NULL)
+	{
+		len = *p - stash + 1;
+		line = ft_strdup(stash, len);
+	}
+	else
+	{
+		line = ft_strdup(stash, ft_strlen(stash));
+	}
+	return (line);
+}
+
+static char	*ft_next_line(char *stash, char **p)
+{
+	char	*next;
+
+	if (*p != NULL)
+	{
+		*p = *p + 1;
+		next = ft_strdup(*p, ft_strlen(*p));
+	}
+	else
+	{
+		next = NULL;
+	}
+	free(stash);
+	stash = NULL;
+	return (next);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*stash;
+	char		*line;
+	char		*p;
+
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	buf = read_file(fd, buffer);
-	if (!buf)
+	if (stash == NULL)
+	{
+		stash = malloc(1);
+		*stash = '\0';
+	}
+	stash = get_stash(fd, stash);
+	if (stash == NULL)
 		return (NULL);
-	line = ft_line(buffer);
-	buf = ft_next(buffer);
+	if (*stash == '\0')
+	{
+		free(stash);
+		stash = NULL;
+		return (NULL);
+	}
+	line = ft_get_line(stash, &p);
+	stash = ft_next_line(stash, &p);
 	return (line);
-}*/
+}
 
-int	main(void)
+/*int	main(void)
 {
 	#include <fcntl.h>
 	#include <stdio.h>
 	char	*file;
 	int		fd;
-	int		bytes_read;
 	char	*line;
 
 	file = "papa.txt";
@@ -84,11 +120,11 @@ int	main(void)
 		printf("Cannot read file.\n");
 		return (1);
 	}
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 1; i++)
 	{
-		line = read_until_nl(fd);
+		line = get_next_line(fd);
 		printf("%s\n", line);
 		free(line);
 	}
 	close(fd);
-}
+}*/
