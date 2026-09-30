@@ -6,12 +6,11 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 09:16:03 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/09/27 16:47:47 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/28 15:47:26 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
 
 static char	*get_stash(int fd, char *stash)
 {
@@ -36,7 +35,7 @@ static char	*get_stash(int fd, char *stash)
 		stash = ft_strjoin(stash, buf);
 		free(p);
 		if (ft_strchr(buf, '\n') != NULL)
-			break;
+			break ;
 	}
 	free(buf);
 	return (stash);
@@ -88,7 +87,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if (stash == NULL)
 	{
-		stash = malloc(1);
+		stash = malloc(1024);
 		*stash = '\0';
 	}
 	stash = get_stash(fd, stash);

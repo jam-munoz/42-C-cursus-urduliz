@@ -6,7 +6,7 @@
 /*   By: joamunoz <joamunoz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 09:24:39 by joamunoz          #+#    #+#             */
-/*   Updated: 2026/09/27 16:09:12 by joamunoz         ###   ########.fr       */
+/*   Updated: 2026/09/27 17:34:15 by joamunoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,30 +49,6 @@ char	*ft_strdup(const char *s, size_t len)
 		len--;
 	}
 	return (dup);
-}
-
-char	*ft_substr(const char *s)
-{
-	size_t	i;
-	size_t	len;
-	char	*str;
-
-	len = 0;
-	i = 0;
-	while (s[len] != '\n' && s[len] != '\0')
-		len++;
-	if (s[len] == '\n')
-		len++;
-	str = malloc(len + 1);
-	if (str == NULL)
-		return (NULL);
-	while (i < len && s[i] != '\0')
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
 }
 
 char	*ft_strjoin(const char *s1, const char *s2)
