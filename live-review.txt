@@ -1,2 +1,3 @@
 libft: write a function of the first part of the project live in front of the evaluator
 ft_printf: make ft_printf work with a %a conversion that writes a static string. (ex: "hello, %a world": hello, awesome world)
+get_next_line: change the separator character from '\n' to something else
