@@ -1,0 +1,3 @@
+[submodule "42-push_swap"]
+	path = 42-push_swap
+	url = https://github.com/jam-munoz/42-push_swap
